@@ -1,0 +1,235 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SafeHome — безопасность семьи, контроль загородного дома и премиальный защитный комплекс 24/7." />
+  <title>SafeHome | Безопасность семьи и дома</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top">SafeHome</a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <a href="#services">Услуги</a>
+        <a href="#calculator">Рассчитать</a>
+        <a href="#cases">Кейсы</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section-large">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Премиальная защита</span>
+          <h1>Пока вы отдыхаете с семьёй, дом остаётся под контролем 24/7.</h1>
+          <p>SafeHome не продаёт камеры. Мы продаём спокойствие семьи, уверенность в сохранности дома и управление безопасностью на уровне элитной недвижимости.</p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Бесплатная консультация инженера</a>
+            <a class="btn btn-secondary" href="#calculator">Рассчитать стоимость</a>
+          </div>
+
+          <div class="hero-offers">
+            <div class="offer-card">Бесплатный выезд инженера</div>
+            <div class="offer-card">Схема размещения системы бесплатно</div>
+            <div class="offer-card">Смета в день обращения</div>
+            <div class="offer-card">Гарантия 3 года</div>
+          </div>
+        </div>
+
+        <aside class="hero-panel">
+          <div class="panel-card panel-card--accent">
+            <span class="panel-title">Для домов от 15 млн ₽</span>
+            <h2>Услуги для тех, кто ценит безопасность семьи и комфорт управления.</h2>
+            <p>Полный подход: контроль детей и персонала, хранение архива, тревожные сценарии, мониторинг 24/7 и работа по договору.</p>
+          </div>
+          <div class="stat-grid">
+            <div class="stat-card">
+              <strong>500+</strong>
+              <span>реализованных объектов</span>
+            </div>
+            <div class="stat-card">
+              <strong>10 лет</strong>
+              <span>опыта в элитном сегменте</span>
+            </div>
+            <div class="stat-card">
+              <strong>24/7</strong>
+              <span>поддержка и мониторинг</span>
+            </div>
+            <div class="stat-card">
+              <strong>Договор</strong>
+              <span>с официальной гарантией</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container section-inner">
+        <div class="section-header">
+          <span class="eyebrow">Результат важнее техники</span>
+          <h2>Что вы получаете, а не что устанавливаем</h2>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card">
+            <h3>Контроль дома через телефон</h3>
+            <p>Ваш дом под контролем в одно касание: все зоны, входы и тревоги доступны в мобильном приложении.</p>
+          </article>
+          <article class="service-card">
+            <h3>Уведомления о проникновении</h3>
+            <p>Система мгновенно сообщает о подозрительном движении, попытке входа и других событиях.</p>
+          </article>
+          <article class="service-card">
+            <h3>Контроль детей и персонала</h3>
+            <p>Вы знаете, кто находится в доме и на территории, без необходимости постоянно присутствовать лично.</p>
+          </article>
+          <article class="service-card">
+            <h3>Архив до 90 дней</h3>
+            <p>Хранение записей до 90 дней даёт вам полный доступ к истории событий на участке.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-highlight" id="calculator">
+      <div class="container section-inner calculator-section">
+        <div class="calculator-content">
+          <div class="section-header">
+            <span class="eyebrow">Оценка проекта</span>
+            <h2>Рассчитайте ориентировочную стоимость системы</h2>
+          </div>
+          <p>Введите параметры дома, и мы покажем сумму, соответствующую уровню охраны премиум-класса.</p>
+
+          <div class="calculator-card">
+            <div class="calculator-row">
+              <label>Площадь дома, м²</label>
+              <input id="area" type="number" min="80" value="220" />
+            </div>
+            <div class="calculator-row">
+              <label>Количество камер</label>
+              <input id="cameras" type="number" min="4" value="8" />
+            </div>
+            <div class="calculator-row">
+              <label>Тип объекта</label>
+              <select id="objectType">
+                <option value="cottage">Коттедж</option>
+                <option value="house">Загородный дом</option>
+                <option value="villa">Вилла</option>
+              </select>
+            </div>
+            <button id="calculateBtn" class="btn btn-primary">Рассчитать стоимость</button>
+            <div class="estimate-card">
+              <span>Примерная стоимость</span>
+              <strong id="estimateValue">—</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="cases">
+      <div class="container section-inner">
+        <div class="section-header">
+          <span class="eyebrow">Реальные кейсы</span>
+          <h2>Проекты с цифрами и результатом</h2>
+        </div>
+
+        <div class="case-grid">
+          <article class="case-card case-card--wide">
+            <div class="case-meta">420 м² · 12 камер · 5 дней · 820 000 ₽</div>
+            <h3>Коттедж под Москвой</h3>
+            <p>Полный мониторинг участка, охранные сценарии и удалённый контроль для семьи с детьми.</p>
+          </article>
+          <article class="case-card case-card--wide">
+            <div class="case-meta">260 м² · 8 камер · 4 дня · 560 000 ₽</div>
+            <h3>Усадьба на Рублёвке</h3>
+            <p>Интеграция контроля доступа, видеодомофона и визуального контроля территории.</p>
+          </article>
+          <article class="case-card case-card--wide">
+            <div class="case-meta">180 m² · 6 камер · 3 дня · 420 000 ₽</div>
+            <h3>Загородный дом семьи с детьми</h3>
+            <p>Контроль игровых зон, парковки и входа; архив до 90 дней и мобильный доступ.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container section-inner">
+        <div class="section-header">
+          <span class="eyebrow">Ответы на возражения</span>
+          <h2>Вопросы, которые чаще всего задают собственники</h2>
+        </div>
+
+        <div class="faq-grid">
+          <article class="faq-item">
+            <h3>Сколько стоит?</h3>
+            <p>Индивидуальная смета. Для объектов премиум начинается от 420 000 ₽.</p>
+          </article>
+          <article class="faq-item">
+            <h3>Работает ли без интернета?</h3>
+            <p>Охрана работает всегда. Интернет нужен только для удалённого доступа и уведомлений.</p>
+          </article>
+          <article class="faq-item">
+            <h3>Можно ли смотреть с телефона?</h3>
+            <p>Да. Управление домом и просмотр видео доступны на смартфоне в любой точке мира.</p>
+          </article>
+          <article class="faq-item">
+            <h3>Сколько занимает монтаж?</h3>
+            <p>3–7 дней, включая выезд инженера, монтаж, настройку и тестирование системы.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="contact">
+      <div class="container section-inner contact-section">
+        <div class="contact-panel">
+          <div>
+            <span class="eyebrow">Получите план</span>
+            <h2>Закажите персональный план безопасности дома</h2>
+            <p>Мы подготовим предложение под ваш объект, выедем на замеры и сделаем смету в день обращения.</p>
+          </div>
+          <form id="leadForm" class="contact-form">
+            <label>Имя владельца
+              <input id="leadName" type="text" placeholder="Иван Иванов" required />
+            </label>
+            <label>Телефон
+              <input id="leadPhone" type="tel" placeholder="+7 (___) ___-__-__" required />
+            </label>
+            <label>Адрес объекта
+              <input id="leadAddress" type="text" placeholder="Московская обл., участок 15" required />
+            </label>
+            <label>Комментарий
+              <textarea id="leadComment" rows="4" placeholder="Площадь, особенности, пожелания"></textarea>
+            </label>
+            <button type="submit" class="btn btn-primary">Получить план безопасности</button>
+            <p class="form-note" id="formNote">Мы не передаём данные третьим лицам. Ответ в течение часа.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="footer-brand">SafeHome</p>
+        <p>Премиальный сервис безопасности загородных домов.</p>
+      </div>
+      <div class="footer-contact">
+        <p>+7 (495) 123-45-67</p>
+        <p>info@safehome.pro</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
