@@ -45,9 +45,24 @@ if (leadForm) {
       return;
     }
 
-    formNote.textContent = 'Спасибо! Заявка принята. Наш инженер свяжется с вами в течение часа.';
+    formNote.textContent = 'Спасибо! Мы свяжемся с вами в течение 15 минут через удобный для вас способ связи.';
     formNote.style.color = '#5bf2d8';
     leadForm.reset();
     estimateValue.textContent = '—';
   });
+
+  const floatingContactBtn = document.getElementById('floatingContactBtn');
+  const floatingContactMenu = document.getElementById('floatingContactMenu');
+
+  if (floatingContactBtn && floatingContactMenu) {
+    floatingContactBtn.addEventListener('click', () => {
+      floatingContactMenu.classList.toggle('show');
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!floatingContactMenu.contains(event.target) && !floatingContactBtn.contains(event.target)) {
+        floatingContactMenu.classList.remove('show');
+      }
+    });
+  }
 }
