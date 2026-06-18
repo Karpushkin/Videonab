@@ -5,10 +5,6 @@ const camerasInput = document.getElementById('cameras');
 const objectTypeSelect = document.getElementById('objectType');
 const leadForm = document.getElementById('leadForm');
 const formNote = document.getElementById('formNote');
-const leadName = document.getElementById('leadName');
-const leadPhone = document.getElementById('leadPhone');
-const leadAddress = document.getElementById('leadAddress');
-const leadComment = document.getElementById('leadComment');
 
 function formatCurrency(value) {
   return value.toLocaleString('ru-RU', { style: 'currency', currency: 'RUB', maximumFractionDigits: 0 });
@@ -34,46 +30,14 @@ function calculateEstimate() {
   estimateValue.textContent = formatCurrency(estimate);
 }
 
-function saveLeadData() {
-  const leadData = {
-    name: leadName.value.trim(),
-    phone: leadPhone.value.trim(),
-    address: leadAddress.value.trim(),
-    comment: leadComment.value.trim(),
-  };
-
-  localStorage.setItem('safeHomeLead', JSON.stringify(leadData));
-}
-
-function loadLeadData() {
-  const raw = localStorage.getItem('safeHomeLead');
-  if (!raw) {
-    return;
-  }
-
-  try {
-    const data = JSON.parse(raw);
-    if (data.name) leadName.value = data.name;
-    if (data.phone) leadPhone.value = data.phone;
-    if (data.address) leadAddress.value = data.address;
-    if (data.comment) leadComment.value = data.comment;
-  } catch (error) {
-    console.warn('Не удалось загрузить данные заявки:', error);
-  }
-}
-
-if (calculateBtn) {
-  calculateBtn.addEventListener('click', calculateEstimate);
-}
+calculateBtn?.addEventListener('click', calculateEstimate);
 
 if (leadForm) {
-  window.addEventListener('DOMContentLoaded', loadLeadData);
-
   leadForm.addEventListener('submit', (event) => {
     event.preventDefault();
-    const name = leadName.value.trim();
-    const phone = leadPhone.value.trim();
-    const address = leadAddress.value.trim();
+    const name = document.getElementById('leadName').value.trim();
+    const phone = document.getElementById('leadPhone').value.trim();
+    const address = document.getElementById('leadAddress').value.trim();
 
     if (!name || !phone || !address) {
       formNote.textContent = 'Пожалуйста, заполните имя, телефон и адрес объекта.';
@@ -81,7 +45,6 @@ if (leadForm) {
       return;
     }
 
-    saveLeadData();
     formNote.textContent = 'Спасибо! Заявка принята. Наш инженер свяжется с вами в течение часа.';
     formNote.style.color = '#5bf2d8';
     leadForm.reset();
